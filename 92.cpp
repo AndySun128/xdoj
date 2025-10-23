@@ -5,8 +5,8 @@ using std::cin;
 int main() {
     int t[6]={100,50,20,10,5,1};
     int m;cin>>m;
-    for(int i=0;i<6;i++) {
-        cout<<m/t[i]<<" ";
-        m=m%t[i];
+    for(int i:t) {
+        cout<<m/i<<" ";
+        m=m%i;
     }
 }
