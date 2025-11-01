@@ -1,17 +1,16 @@
-#include <algorithm>
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::max;
-using std::min;
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    int n;
-    cin>>n;
-    int s=n % 20;
-    if(s<2||s>18)return 0;
-    int b=(n-101*s) / 20;
-    if(b<0||b>9)return 0;
-    for (int a = max(1,s-9); a <= min(9,s-1); a++)cout<<a <<' '<< b <<' '<<s-a<<'\n';
-    return 0;
+	int n;
+	cin >> n;
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 10; j++) {
+			for (int k = 0; k < 10; k++) {
+				if (101 * (i + k) + 20 * j == n)
+					cout << i << " " << j << " " << k << endl;
+			}
+		}
+	}
+	return 0;
 }
